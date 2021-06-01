@@ -13,12 +13,13 @@ The contagion of fake news has pervaded the world in equal measure. Deeply linke
 The main objective is to differentiate between "real" and "fake" news that can be used by users. We need to build a model with machine learning technologies and natural language processing functions.
 
 # Screenshots of Project
-![s1](https://user-images.githubusercontent.com/60808657/120360663-9e7b8200-c326-11eb-9f5a-e80c73c1b2e9.PNG)
 ### Figure: Home Page
-![s2](https://user-images.githubusercontent.com/60808657/120360666-a0dddc00-c326-11eb-9e5b-72d9a15b6630.PNG)
+![s1](https://user-images.githubusercontent.com/60808657/120360663-9e7b8200-c326-11eb-9f5a-e80c73c1b2e9.PNG)
 ### Figure: Registration page
-![s3](https://user-images.githubusercontent.com/60808657/120360670-a20f0900-c326-11eb-93a8-352e71e28f30.PNG)
+![s2](https://user-images.githubusercontent.com/60808657/120360666-a0dddc00-c326-11eb-9e5b-72d9a15b6630.PNG)
 ### Figure: Login Page
-![s4](https://user-images.githubusercontent.com/60808657/120360677-a3d8cc80-c326-11eb-9fce-78bc8c9284de.PNG)
+![s3](https://user-images.githubusercontent.com/60808657/120360670-a20f0900-c326-11eb-93a8-352e71e28f30.PNG)
 ### Figure: Prediction Page
+![s4](https://user-images.githubusercontent.com/60808657/120360677-a3d8cc80-c326-11eb-9fce-78bc8c9284de.PNG)
+
 
