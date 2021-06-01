@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-image: url(../static/images/fn111.jpg);
+        }
+    </style>
+    <!--template title-->
+    <title>SRAVANTH-Personal HTML Template</title>
+
+    <!--==========Favicon==========-->
+    <link rel="icon" type="image/ico" href="./Webp.net-resizeimage.png" />
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--========== Theme Fonts ==========-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,600,700,800" rel="stylesheet">
+
+    <!--Font Awesome css-->
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/font-awesome.min.css') }}">
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/bootstrap.min.css') }}">
+
+    <!--Animated headline css-->
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/jquery.animatedheadline.css') }}">
+
+    <!--Owl carousel css-->
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/owl.theme.default.css') }}">
+
+    <!--Magnific popup css-->
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/magnific-popup.css') }}">
+
+    <!--animate css-->
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/animate.css') }}">
+
+    <!--Normalizer css-->
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/normalize.css') }}">
+
+    <!--Theme css-->
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/style.css') }}">
+
+    <!--Responsive css-->
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/responsive.css') }}">
+</head>
+
+
+
+
+
+<body>
+    {% block content %}
+    <header class="nav-area navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <!--main menu starts-->
+
+                <div class="col-md-12">
+                    <div class="main-menu">
+                        <div class="navbar navbar-cus">
+                            <div class="navbar-header">
+                                <a href="home.html" class="navbar-brand"><span class="logo">UID</span></a>
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse">
+                                <nav>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="active"><a class="smooth-menu" href="#home">Home</a></li>
+                                        <li><a class="smooth-menu" href="#about">About</a></li>
+                                        <li><a class="active" href="#">Register</a></li>
+                                        <li><a class="active" href="{{ url_for('login' , filename='logint.html') }}">Login</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--main menu ends-->
+            </div>
+        </div>
+    </header>
+
+    <div class="box">
+        <h2>Register Here</h2>
+        <form action="/register" method="POST">
+            <div class="inputBox">
+                <input type="text" name="name" required="">
+                <label for="">Username</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="email" name="email" required="">
+                <label for="">Email</label>
+            </div>
+            <div class="inputBox">
+                <input type="password" name="password" required="">
+                <label for="">Password</label>
+            </div>
+
+            <label>Gender</label>
+            <div id="main-container"><span style="padding-left:11em"></span>
+                <label id="main" value="gender">
+                    <input type="checkbox" name="checkbox">
+                    <div id="tab">
+                        <div id="circle"></div>
+                    </div>
+                    <div id="gender"></div>
+                </label>
+            </div><br><br><br>
+
+            <div>
+            </div><br>
+            <div class="clear"> </div>
+            <label class="checkbox"><input type="checkbox" name="checkbox" checked><i></i>I agree to the <a href="#">Terms and Conditions</a></label>
+
+
+            <input type="submit" name="" value="Submit">
+        </form>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

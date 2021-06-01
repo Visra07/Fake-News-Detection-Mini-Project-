@@ -1,0 +1,696 @@
+html,body{
+    height: 100%;
+    background-color:black;
+}
+@import url("https://fonts.googleapis.com/css?family=Barlow");
+
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333333;
+    font-weight: 400;
+}
+p1{
+    color:black;
+}
+h1,
+h2,
+h4,
+h5,
+h6{
+    color: #333333;
+    font-weight: 600;
+}
+
+p {
+    letter-spacing: 0;
+    line-height:1.8;
+    
+}
+
+a{
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+a:focus{
+    outline:none;
+    text-decoration: none;
+}
+
+ul,li{
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding{
+    padding: 60px 0;
+}
+
+.section-header{
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-header h2 {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.line-one {
+    height: 1px;
+    width: 100px;
+    background:linear-gradient(to top, #0000ff 0%, #00ffff 128%);
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*---Default css ends---*/
+
+/*-------------- 2. Preloader css starts ---------------*/
+
+.loader_bg {
+    position: fixed;
+    z-index: 9999999;
+    background: #000;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+
+.loader:before, .loader:after {
+    content: '';
+    border: 1em solid linear-gradient(to top, #0000ff 0%, #00ffff 128%);
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.loader:before {
+    animation-delay: .5s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(0);
+        opacity: 0; }
+    50% {
+        opacity: 1; }
+    100% {
+        transform: scale(1);
+        opacity: 0; }
+}
+
+
+/*-------------- Preloader css ends ---------------*/
+
+/*--- 3. Mouse animation starts---*/
+
+@-webkit-keyframes scroll-ani {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+@keyframes scroll-ani {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+    15% {
+        opacity: 1;
+        top: 50%;
+    }
+    50% {
+        opacity: 0;
+        top: 50%;
+    }
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+.mouse-scroll {
+    position: absolute;
+    left:48%;
+    display: inline-block;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #000;
+    letter-spacing: 2px;
+    margin-top: 10%;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.mouse-scroll .mouse {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 60px;
+    margin: 0 auto 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid #000;
+    border-radius: 23px;
+}
+
+.mouse-scroll .mouse .mouse-movement {
+    position: absolute;
+    display: block;
+    top: 29%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: #000;
+    border-radius: 50%;
+    -webkit-animation: scroll-ani 2s linear infinite;
+    animation: scroll-ani 2s linear infinite;
+}
+
+/*---mouse animation ends---*/
+
+/*---------- 4. Nav area css starts -------------*/
+
+.nav-area{
+    height: 65px;
+}
+
+.nav-area.sticky_navigation{
+    background: #000;
+    height: 80px;
+}
+
+.navbar-nav {
+    margin-top: 15px;
+}
+
+.sticky_navigation{
+    -webkit-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out ;
+    transition: all 0.4s ease-out ;
+    -webkit-box-shadow: 0px 3px 4.6px 0.3px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 4.6px 0.3px rgba(0,0,0,0.25);
+}
+
+.sticky_navigation .main-menu{
+    margin-top: 0;
+}
+
+.sticky_navigation .navbar-brand, .sticky_navigation .navbar-brand span {
+background: -webkit-linear-gradient(#00ffff,#ffccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.sticky_navigation .navbar-brand:hover, .sticky_navigation .navbar-brand:focus, .sticky_navigation .navbar-brand span {
+    color:linear-gradient(to top, #0000ff 0%, #00ffff 128%);
+}
+
+.sticky_navigation .nav li a {
+    color: #333333;
+}
+
+.sticky_navigation .nav li.active a{
+    color: #00ffff;
+}
+
+.sticky_navigation .nav li.active::before {
+    border-top: 1px solid #E91E63;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+.sticky_navigation .nav li.active::after {
+    border-bottom: 1px solid #E91E63;
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.sticky_navigation .navbar-brand:hover{
+    color:transparent;
+}
+
+.main-menu{
+    -webkit-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    margin-top: 10px;
+}
+
+.navbar{
+    border:0;
+    margin-bottom: 0;
+}
+
+.navbar-brand{
+    padding: 25px 0;
+    text-transform: uppercase;
+    font-size: 25px;
+    display: block;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.logo {
+    padding: 5px;
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+.navbar-brand:focus, .navbar-brand:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navbar-right li{
+    display: inline-block;
+    float: none;
+}
+
+.navbar-right li a{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.navbar-right li.active a{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav > li > a:hover,
+.nav > li > a:active,
+.nav > li > a:focus{
+    background: none;
+}
+
+.navbar-toggle .icon-bar{
+    background: #033D75;
+}
+
+/*---------- Nav area css ends -------------*/
+
+/*----------- 5. Banner area css starts--------------*/
+
+
+.banner-area{
+    background-image: url(../images/fn7.jpg);
+    background-position: center;
+    background-size:cover;
+    position: relative;
+    height: 100%;
+}
+
+.banner-area::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    content: '';
+}
+
+canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.banner-table{
+    display: table;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.banner-table-cell{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.welcome-text .intro h2 {
+    color: #fff;
+    font-size: 85px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.intro h1 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 200;
+    margin: 0;
+}
+
+.ah-headline.clip .ah-words-wrapper::after {
+    background-color: #fff;
+}
+
+.banner-btn {
+    background: linear-gradient(to top, #0000ff 0%, #00ffff 128%);
+    text-decoration: none;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 25px;
+    color: #000;
+    text-transform: uppercase;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+.banner-btn:hover, .banner-btn:focus {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.welcome-text h3 {
+    color: #ffff;
+    text-transform: uppercase;
+}
+
+/*---------Banner area css ends--------------*/
+
+/*---------- 6. About area css starts---------------*/
+
+.about-text-left h2 {
+    font-weight: 700;
+    font-size: 36px;
+    color: #00bfff;
+    line-height: 1;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.about-text-left h3 {
+    color:  #1affff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.about-text-left p{
+    text-align: left;
+    font-size: 13px;
+    color:  #1affff;
+    margin-bottom: 50px;
+}
+
+.about-text-left a {
+    color:  #1affff;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #80bfff;
+    padding: 15px;
+    float: left;
+    text-decoration: none;
+}
+.about-text-left {
+    margin-top: 50px;
+}
+.about-text-left .paragraph{
+color:  #1affff;
+  font-family: 'Barlow', sans-serif;
+  font-size:15px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 18px;
+  
+}
+
+
+
+/*-------About area css ends--------------*/
+
+/*--------  login area starts-----------*/
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.box .inputBox {
+  position: relative;
+}
+.box .inputBox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+  animation: LabelOnLoad 1s forwards 0s ease;
+}
+@keyframes LabelOnLoad {
+  0% {
+    transform: rotate(0) translateY(-19px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0) translateY(0);
+    opacity: 1;
+  }
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label {
+  top: -19px;
+  left: 0;
+  color: linear-gradient(to right, #11998e, #38ef7d);
+  font-size: 12px;
+}
+.box input[type="submit"] {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #03a9f4;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.box input[type="submit"]:hover {
+  background-color: linear-gradient(to right, #11998e, #38ef7d);
+}
+@media (max-width: 720px) {
+  .box {
+    width: 80%;
+  }
+}
+
+
+#gender{
+  position: absolute;
+}
+
+#gender::before{
+  position: absolute;
+  content: '\2642';
+  color: aqua;
+  left: 0;
+  top: 10px;
+  transition: all 1.2s;
+  font-weight: bolder;
+}
+
+#main input:checked ~ #gender::before{
+  color: deeppink;
+  left: 105px;
+  transition: all 1.2s ease-in-out;
+  content: '\2640';
+}
+
+#main-container{
+  position: absolute;
+  width: 10px;
+  display: flex;
+  flex-direction: row;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+}
+
+#main{
+  left: 50%;
+  width: 120px;
+  position: relative;
+  display: block;
+  justify-self: center;
+}
+
+#main input{
+  -webkit-appearance: none;
+  position: absolute;
+}
+
+#tab{
+  width: 120px;
+  height: 45px;
+  border-radius: 45px;
+  z-index: 20;
+  /* background: green; */
+  transition: all .3s;
+}
+
+#circle{
+  width: 45px;
+  height: 45px;
+  background: aqua;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 15px rgba(0,255,255,.8);
+  z-index: 99;
+  border-radius: 50%;
+  transition: all .3s;
+}
+
+#main input:checked + #tab #circle{
+  background: deeppink;
+  box-shadow: 0 0 15px rgba(255, 20, 147, .8);
+  left: 75px;
+}
+
+#tab::before{
+  content: '';
+  height: 45px;
+  width: 100%;
+  background: linear-gradient(-90deg,#011 0%,aqua 350%);
+  border-radius: 45px;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  opacity: 1;
+  transition: all .3s;
+}
+
+#tab::after{
+  content: '';
+  height: 45px;
+  width: 100%;
+  background: linear-gradient(90deg,#011 0%,deeppink 350%);
+  border-radius: 45px;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  opacity: 0;
+  transition: all .3s;
+}
+
+#main input:checked + #tab::before{
+  opacity: 0;
+}
+
+#main input:checked + #tab::after{
+  opacity: 1;
+}
+
+#gender{
+  position: absolute;
+}
+
+#gender::before{
+  position: absolute;
+  content: '\2642';
+  color: aqua;
+  left: 0;
+  top: 10px;
+  transition: all 1.2s;
+  font-weight: bolder;
+}
+
+#main input:checked ~ #gender::before{
+  color: deeppink;
+  left: 105px;
+  transition: all 1.2s ease-in-out;
+  content: '\2640';
+}
+/*--------  login area ends-----------*/
+
+footer {
+   color:linear-gradient(to bottom, #ffffff 0%, #66ffff 100%);
+   text-align: center;
+}
